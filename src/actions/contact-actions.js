@@ -15,6 +15,8 @@ export default {
     };
   },
   recieveContact(contact) {
+    // @JAS why is only this function pulled outside of the export?
+    // Seems to be used a little bit lower. Can we re-factor?
     return initializeContact(contact);
   },
   initializeCreateOrEditContact(params) {
@@ -35,6 +37,7 @@ export default {
       const errors = getState().contact.errors;
       const contact = getState().contact.contact;
       return dispatch({ type: REQUEST_SAVE_CONTACT, errors, contact });
+      // @JAS can we move this logic to the middleware?
     }
   },
   onContactAttributeChange(name, value) {

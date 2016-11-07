@@ -10,6 +10,9 @@ export default {
       if (params.id === contact.id) {
         return Promise.resolve();
       }
+      // @JAS Slightly confused here. Can't we always dispatch this action,
+      // and let the middleware decide if we need to fetch or not??
+      // how do we access state from middleware?
       return dispatch({
         type: REQUEST_CONTACT_CARD,
         id: params.id,

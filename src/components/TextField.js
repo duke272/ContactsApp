@@ -2,6 +2,9 @@ import React, { PropTypes } from 'react';
 import TextFieldMUI from 'material-ui/TextField';
 import _ from 'lodash';
 
+// @JAS this one isn't very redux'ed. I guess it's an external module?
+// A: performance improvement
+
 class TextField extends React.Component {
 
   constructor(props) {

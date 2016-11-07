@@ -1,3 +1,5 @@
+// @JAS I'm getting slightly confused with the naming here. Instead of INITIALIZE_CONTACT
+// could we use REQUEST_CONTACT_SUCCESS and REQUEST_CONTACT_FAIL?
 export const LOADING_CONTACT = 'LOADING_CONTACT';
 export const INITIALIZE_CONTACT = 'INITIALIZE_CONTACT';
 export const UPDATE_CONTACT_ATTRIBUTE = 'UPDATE_CONTACT_ATTRIBUTE';

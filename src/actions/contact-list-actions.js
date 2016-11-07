@@ -35,6 +35,7 @@ export default {
     };
   },
   loadContactCard(contact) {
+    // @JAS what is the purpose of this? Can't we just link to a different route?
     return {
       type: INITILIZE_CONTACT_CARD_FROM_OTHER_VIEW,
       contact,

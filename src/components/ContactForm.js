@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import { RaisedButton } from 'material-ui';
 import TextField from './TextField';
 
+// @JAS I'm seeing different ways of applying styles. We should find a uniform solution for this
+
 const styles = {
   formContainer: {
     display: 'flex',
@@ -17,6 +19,8 @@ const styles = {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
+    // @JAS in other places you use the arrow functions. Personally I prefer this over bind()
+    // arrow functions more expensive on CPU? research..
     this.onSubmit = this.onSubmit.bind(this);
   }
 

@@ -9,6 +9,8 @@ import _ from 'lodash';
 
 export function* fetchContact(id) {
   try {
+    // @JAS this feels like we are mis-using an action to show a loading screen.
+    // How would you feel about manipulating the state on the REQUEST_CONTACT action instead of dispatching this?
     yield put(ContactActions.loadingContact());
     const contact = yield call(ContactsServices.get, id)
     yield put(ContactActions.recieveContact(contact));

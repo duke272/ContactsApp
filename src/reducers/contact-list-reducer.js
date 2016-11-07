@@ -12,6 +12,7 @@ export const initialState = {
 const contactList = (state = initialState, action) => {
   switch (action.type) {
     case (LOADING_CONTACT_LIST):
+      // @JAS return { ...state, loading: true }. (https://github.com/airbnb/javascript#objects--rest-spread)
       return Object.assign({}, state, { loading: true });
     case (INITIALIZE_CONTACT_LIST):
       return Object.assign({}, state, { contacts: action.contacts, loading: false });
